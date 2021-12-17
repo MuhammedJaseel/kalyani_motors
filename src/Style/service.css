@@ -1,0 +1,97 @@
+.service_header {
+  height: 79px;
+  background: #1d1d1b;
+}
+
+.service_title {
+  font-weight: bold;
+  font-size: 30px;
+  color: #282828;
+  margin: 8px 2%;
+}
+
+.service_each_area {
+  display: flex;
+  border: 1px solid #ebebeb;
+  margin: 8px 2%;
+  padding: 10px 0px;
+  padding-left: 2%px;
+  width: 96%;
+}
+
+.service_each_img {
+  width: 150px;
+  height: 150px;
+}
+
+.service_each_title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #282828;
+}
+
+.service_each_subtitle {
+  font-size: 14px;
+  color: #282828;
+}
+
+.service_each_title_bar {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+}
+
+.service_each_time {
+  font-size: 12px;
+  background-color: #e5e7e9;
+  color: #707171;
+  padding: 7px 15px;
+  border-radius: 2px;
+  display: flex;
+}
+
+.service_each_time_icon {
+  width: 13px;
+  height: 13px;
+  margin-right: 4px;
+  background: url(https://websiteasset.s3.ap-south-1.amazonaws.com/New+Website/components/Services/ServicesListDesktop/76D2D1C8-A85C-4C56-A53D-DE23B9C19F76.svg);
+}
+
+.service_each_subtitle {
+  color: #707171;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 0px;
+}
+
+.service_each_data {
+  flex-wrap: wrap;
+  display: flex;
+  color: #707171;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-stretch: expanded;
+}
+
+.service_select {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #e73c33;
+  color: #e73c33;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.service_body_header_container {
+  display: flex;
+  position: relative;
+  height: 90px;
+  margin: 0px 15px;
+  align-items: center;
+  background: white;
+  box-shadow: 0 0.25rem 0.3125rem 0 rgb(0 0 0 / 12%);
+}

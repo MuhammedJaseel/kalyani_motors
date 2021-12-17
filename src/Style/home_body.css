@@ -1,0 +1,489 @@
+.home_monsoon_area {
+  display: flex;
+  margin: 4px 0px;
+  overflow: auto;
+  max-width: 100% - 30px;
+  scrollbar-width: none;
+}
+
+.home_monsoon_area::-webkit-scrollbar {
+  height: 0px;
+  background: #fff;
+}
+
+.home_monsoon_container {
+  height: 160px;
+  width: 240px;
+  box-shadow: 0.0625rem 0.0625rem 0.1875rem 0.0625rem rgb(0 0 0 / 12%);
+  margin: 4px;
+  border-radius: 4px;
+}
+
+.home_monsoon_img {
+  height: 140px;
+  width: 220px;
+}
+
+.home_monsoon_content_title {
+  font-size: 14px;
+  text-align: center;
+  width: 250px;
+  font-weight: 700;
+  font-family: Gilroy, sans-serif;
+}
+
+.home_monsoon_arrow_button_right {
+  cursor: pointer;
+  margin: 5px;
+}
+.home_monsoon_arrow_button_left {
+  cursor: pointer;
+  margin: 5px;
+  transform: scaleX(-1);
+}
+
+.home_services_each {
+  /* min-width: 230px; */
+  width: 230px;
+  height: 180px;
+  margin: 15px;
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  border-radius: 7px;
+  /* background: #f3f3f3; */
+  /* padding-top: 20px; */
+  box-shadow: 0 0.25rem 0.3125rem -0.15rem rgb(0 0 0 / 12%);
+}
+
+.home_services_each:hover {
+  transition: 0.5s ease-in-out;
+  /* -moz-transition: width 1s ease-in-out; */
+  /* -o-transition: width 1s ease-in-out; */
+  /* transition: width 1s ease-in-out; */
+  margin: 5px;
+  /* padding-top: 25px; */
+  width: 250px;
+  height: 200px;
+}
+
+.home_services_img_area {
+  background-color: #f2f2f2;
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.home_services_each_img {
+  width: 40%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.home_services_each_title {
+  margin-top: 5px;
+  padding: 2px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222222;
+}
+.home_services_each_subtitle {
+  padding: 2px 10px;
+  font-size: 11px;
+  /* font-weight: 600; */
+  color: #4a4a4a;
+}
+
+/**********************************************************************************************************/
+/*  Go mechanic clone Design for kalyani moters
+    Design
+    SOURAV
+    30 aug 2021
+*/
+
+.bottomTextBox {
+  background-color: #5195e1;
+  display: flex;
+  padding: 15px 30px;
+  align-items: center;
+  color: whitesmoke;
+}
+
+@media only screen and (max-width: 576px) {
+  .bottomTextBox {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.iconimg {
+  width: 64px;
+  height: 76px;
+  background-image: url(https://gomechanic.in/graphics/Group7557.png);
+  margin-right: 30px;
+}
+
+.bottomBoxSubText {
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+.bottomBoxHeading {
+  padding-top: 25px;
+  font-size: 26px;
+  font-weight: 600;
+}
+/* ////////// */
+
+.home_body_header_container {
+  display: flex;
+  position: relative;
+  height: 65px;
+  background-color: #f6f6f6;
+  align-items: center;
+  box-shadow: 0 0.25rem 0.3125rem 0 rgb(0 0 0 / 12%);
+  width: 100%;
+  /* flex-wrap: wrap; */
+}
+
+@media only screen and (max-width: 576px) {
+  .home_body_header_container {
+    display: none;
+  }
+}
+
+.home_body_header_logo_area {
+  /* width: 170px; */
+  min-width: 170px;
+  padding: 0px 1%;
+}
+
+.home_body_header_navigator {
+  display: flex;
+  width: calc(60% - 170px);
+  min-width: 300px;
+  align-items: center;
+}
+
+.home_body_header_booking_area {
+  display: flex;
+  width: 40%;
+  min-width: 300px;
+  padding: 0% 2%;
+}
+
+.home_body_header_leftarrow {
+  width: 10px;
+  height: 17px;
+  object-fit: contain;
+  transform: rotate(180deg);
+  margin-right: 5px;
+  padding: 0px 10px;
+}
+.home_body_header_rightarrow {
+  width: 10px;
+  height: 17px;
+  object-fit: contain;
+  margin-right: 5px;
+  padding: 0px 10px;
+}
+.home_body_header_maincontent {
+  display: flex;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.home_body_header_maincontent::-webkit-scrollbar {
+  height: 0px;
+  background: #fff;
+}
+.home_body_header_content {
+  text-align: left;
+  color: #4a4a4a;
+  padding: 17px;
+  font-size: 15px;
+  white-space: nowrap;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+/**********************************************************************************************************/
+
+/**********************************************************************************************************/
+/*  Go mechanic clone Design for kalyani moters
+Design
+SOURAV
+31 aug 2021
+*/
+* {
+  font-family: sans-serif;
+}
+.header {
+  font-weight: 700;
+  color: #282828;
+  font-size: 32px;
+  font-family: sans-serif;
+}
+/* .glide_review {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+} */
+.card {
+  background-color: #f6f6f6;
+
+  width: 433px;
+  height: 462px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.quats_img {
+  height: 50px;
+  width: 50px;
+  margin-top: -30px;
+}
+.card_header {
+  font-size: 21;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.0112rem;
+  color: #282828;
+  margin-top: 0.4375rem;
+  text-align: center;
+  min-height: 3.5625rem;
+  font-family: sans-serif;
+  margin: "7px 0px 0px";
+}
+.card_text {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: #4a4a4a;
+  margin-top: 0.1rem;
+  line-height: 1.73;
+  letter-spacing: 0.0088rem;
+  min-height: 12.5rem;
+}
+/* .social_icon {
+  flex-direction: row;
+  display: flex;
+} */
+/* .social_data {
+  color: #000;
+  margin-left: 1.5rem;
+  padding: 10px;
+  flex-direction: row;
+} */
+/* .social_data_name {
+  margin: -3px;
+  font-size: 0.9375rem;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: 0.0088rem;
+  text-align: left;
+  color: #000;
+} */
+/* .social_data_media {
+  margin: -3px;
+  font-weight: 400;
+  color: #4a4a4a;
+  font-size: 0.9375rem;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: 0.0088rem;
+  text-align: left;
+} */
+.horizonalbar {
+  border: 0.125rem solid #f1f1f1;
+}
+
+.dropdown {
+  background-color: #eaeaea;
+  padding: 16px 11px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 94%;
+  margin-top: 2px;
+}
+.dropdown_text {
+  font-size: 17px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.12;
+  letter-spacing: 0.15px;
+  text-align: left;
+  color: #282828;
+}
+.dropdown_data {
+  background-color: #f6f6f6;
+  font-size: 15px;
+  font-weight: 400;
+  font-stretch: normal;
+  color: #4a4a4a;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: 0.14px;
+  text-align: left;
+  color: #4a4a4a;
+  transform-origin: top;
+  padding: 7px 13px 13px 14px;
+  width: 93%;
+  overflow: hidden;
+}
+
+.india_img {
+  width: 1.5625rem;
+  height: 1rem;
+  padding-right: 0.625rem;
+  border-right: 0.0625rem solid #e3ecf8;
+}
+.mobile_no_input {
+  outline: none;
+  border: none;
+  max-width: 7.5rem;
+  margin-left: 0.625rem;
+}
+.get_app_link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: 0.0081rem;
+  text-align: left;
+  color: #e73c33;
+  border: 0.0625rem solid #e3ecf8;
+  background-color: #fff;
+  padding: 0.625rem;
+  cursor: pointer;
+}
+.feature_service_header_div {
+  display: flex;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: 0.01rem;
+  text-align: left;
+  color: #282828;
+  margin-top: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32px;
+}
+.service_buddies {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.3215rem;
+  background-color: #f6f6f6;
+  border: 0.0625rem solid hsla(0, 0%, 60.8%, 0.15);
+  margin-top: 30px;
+}
+.service_buddie_name {
+  font-stretch: normal;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.0112rem;
+  text-align: left;
+  color: #282828;
+}
+.rating_star {
+  width: 25px;
+  height: 25px;
+}
+.buddies_rating_detail {
+  font-size: 14px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: 0.0129rem;
+  text-align: left;
+}
+ul li::marker {
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+  text-indent: 0px !important;
+  text-align: start !important;
+  text-align-last: start !important;
+}
+.buddies_service_details {
+  min-height: 4rem;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.73;
+  letter-spacing: 0.0088rem;
+  text-align: left;
+  color: #4a4a4a;
+  margin-top: 12.6px;
+  font-stretch: normal;
+}
+.whyin_bangalore {
+  display: flex;
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: 0.01rem;
+  text-align: left;
+  color: #282828;
+  margin-top: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.reason_to_choose {
+  display: "flex";
+  flex-direction: column;
+  background-color: #f6f6f6;
+  margin-left: unset;
+  height: fit-content;
+  padding-bottom: 1.85rem;
+}
+.service_price_header {
+  display: flex;
+  text-align: left;
+  color: #282828;
+  align-items: center;
+}
+.pricelist_table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 0.0625rem solid hsla(0, 0%, 60.8%, 0.5);
+}
+.price_table_head {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.41;
+  letter-spacing: 0.0094rem;
+  text-align: left;
+  padding: 1.125rem 1.0625rem;
+  border: 0.0625rem solid hsla(0, 0%, 60.8%, 0.5);
+}
+@media (max-width: 30px) {
+  .carousil {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/**********************************************************************************************************/
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////// */
