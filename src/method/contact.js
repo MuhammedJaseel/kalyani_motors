@@ -18,22 +18,45 @@ export async function getdataforContact(props) {
       }
 
       ////////////////
+
       var locs = [];
       var insetred = false;
       for (let j = 0; j < res[2].data.length; j++) {
         const element = res[2].data[j];
-        insetred = false;
-        for (let i = 0; i < locs.length; i++) {
-          const loc = locs[i];
-          if (loc.title === element.category.title) {
-            locs[i].data.push(element);
-            insetred = true;
-            break;
+        if (element.city === "bangalore") {
+          insetred = false;
+          for (let i = 0; i < locs.length; i++) {
+            const loc = locs[i];
+            if (loc.title === element.category.title) {
+              locs[i].data.push(element);
+              insetred = true;
+              break;
+            }
           }
+          if (!insetred)
+            locs.push({ title: element.category.title, data: [element] });
         }
-        if (!insetred)
-          locs.push({ title: element.category.title, data: [element] });
       }
+      props.setState({ shops_b: locs });
+      locs = [];
+      insetred = false;
+      for (let j = 0; j < res[2].data.length; j++) {
+        const element = res[2].data[j];
+        if (element.city === "hyderabad") {
+          insetred = false;
+          for (let i = 0; i < locs.length; i++) {
+            const loc = locs[i];
+            if (loc.title === element.category.title) {
+              locs[i].data.push(element);
+              insetred = true;
+              break;
+            }
+          }
+          if (!insetred)
+            locs.push({ title: element.category.title, data: [element] });
+        }
+      }
+      props.setState({ shops_h: locs });
       ////////////////
 
       props.setState({
@@ -44,6 +67,11 @@ export async function getdataforContact(props) {
       });
     })
     .catch(() => props.setState({ error: "Not Fount" }));
+
+  const path = window.location.pathname.split("/")[3];
+  if (path === "nexa") props.setState({ place: 0 });
+  if (path === "arena") props.setState({ place: 1 });
+  if (path === "commercial") props.setState({ place: 2 });
 
   props.setState({ loading: false });
 }

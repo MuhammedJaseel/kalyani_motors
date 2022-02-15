@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../style/cu1.css";
 import directIcon from "../asset/direct_icon.png";
 import phoneIconB from "../asset/phone_icon_b.png";
+import globeIcon from "../asset/globe_icon.png";
 import { EnquiryPopup } from "../widget/popups";
 import { getdataforContact } from "../method/contact";
 import { ErrorPage, LoadingPage } from "../widget/warning_page";
@@ -22,8 +23,8 @@ export default class ContactPage extends Component {
       faq: [],
       area: 0,
       place: 0,
-      shops: [],
-      shop: 0,
+      shops_b: [],
+      shops_h: [],
     };
   }
 
@@ -32,7 +33,7 @@ export default class ContactPage extends Component {
   }
 
   render() {
-    const { loading, error, area, place, shops, shop } = this.state;
+    const { loading, error, area, place, shops_b, shops_h } = this.state;
     if (loading) return <LoadingPage />;
     if (error != null) return <ErrorPage />;
     return (
@@ -71,7 +72,7 @@ export default class ContactPage extends Component {
                 onClick={() => this.setState({ place: 1 })}
               >
                 {place === 1 ? <div className="cu1_a_f" /> : null}
-                <div className="cu1_a_e">Areena</div>
+                <div className="cu1_a_e">Arena</div>
               </div>
               <div
                 className="cu1_a_d"
@@ -84,7 +85,7 @@ export default class ContactPage extends Component {
           </div>
         </div>
 
-        {shops[shop]?.data.map((loc) => (
+        {(area == 0 ? shops_b : shops_h)[place]?.data.map((loc) => (
           <div className="cu1_b_a">
             <div className="cu1_b_lc1_a">
               <div className="cu1_b_lc1_ab">
@@ -96,27 +97,27 @@ export default class ContactPage extends Component {
                 />
               </div>
               <div className="cu1_b_lc1_ac">
-                <div className="cu1_b_lc1_acba">{"loc.location_name"}</div>
-                <div className="cu1_b_lc1_acbb">{"loc.address"}</div>
+                <div className="cu1_b_lc1_acba">{loc.location_name}</div>
+                <div className="cu1_b_lc1_acbb">{loc.address}</div>
                 <div className="cu1_b_lc1_acbba">
-                  {"loc.phone}/{loc.alternate_phone"}
+                  {loc.phone}/{loc.alternate_phone}
                 </div>
                 <div className="cu1_b_lc1_acbba">
                   customersupport@kalyanimotors.com
                 </div>
                 <div className="cu1_b_lc1_acbba">
-                  Opening Time {"loc.open_time"}&nbsp;&nbsp;&nbsp;&nbsp;Closing
-                  Time {"loc.close_time"}
+                  Opening Time {loc.open_time}&nbsp;&nbsp;&nbsp;&nbsp;Closing
+                  Time {loc.close_time}
                 </div>
 
                 <div className="cu1_b_lc1_aca">
                   <div
                     className="cu1_b_lc1_acaa"
-                    // onClick={() =>
-                    //   window.location.assign(
-                    //     `https://maps.google.com/?q=${loc.latitude},${loc.longtitude}`
-                    //   )
-                    // }
+                    onClick={() =>
+                      window.location.assign(
+                        `https://maps.google.com/?q=${loc.latitude},${loc.longtitude}`
+                      )
+                    }
                   >
                     <img
                       alt="icon"
@@ -127,7 +128,7 @@ export default class ContactPage extends Component {
                   </div>
                   <div
                     className="cu1_b_lc1_acaa"
-                    // onClick={() => window.location.assign(`tel:${loc.phone}`)}
+                    onClick={() => window.location.assign(`tel:${loc.phone}`)}
                   >
                     <img
                       alt="icon"
@@ -136,29 +137,50 @@ export default class ContactPage extends Component {
                     />
                     Call
                   </div>
-                  {/* <div
-                  className="cu1_b_lc1_acaa"
-                  onClick={() => window.location.assign(loc.website)}
-                >
-                  <img className="cu1_b_lc1_acab" src={globeIcon} />
-                  Web Site
-                </div> */}
+                  <div
+                    className="cu1_b_lc1_acaa"
+                    onClick={() => window.location.assign(loc.website)}
+                  >
+                    <img className="cu1_b_lc1_acab" src={globeIcon} />
+                    Web Site
+                  </div>
                   <div className="cu1_b_lc1_acac">
                     <div
                       className="cu1_b_lc1_acaca"
-                      //   onClick={() => setshowEnquiry(3)}
+                      onClick={() =>
+                        this.setState({
+                          enquiryPopup: {
+                            location: loc.location_name,
+                            type: 3,
+                          },
+                        })
+                      }
                     >
                       Book a Test Drive
                     </div>
                     <div
                       className="cu1_b_lc1_acaca"
-                      //   onClick={() => setshowEnquiry(4)}
+                      onClick={() =>
+                        this.setState({
+                          enquiryPopup: {
+                            location: loc.location_name,
+                            type: 8,
+                          },
+                        })
+                      }
                     >
                       Book a Service
                     </div>
                     <div
                       className="cu1_b_lc1_acaca"
-                      //   onClick={() => setshowEnquiry(5)}
+                      onClick={() =>
+                        this.setState({
+                          enquiryPopup: {
+                            location: loc.location_name,
+                            type: 5,
+                          },
+                        })
+                      }
                     >
                       Enquire Now
                     </div>

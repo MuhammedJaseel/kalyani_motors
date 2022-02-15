@@ -6,8 +6,8 @@ export default async function getAllcars(props) {
     axios.get(url + "product"),
     axios.get(url + "iconlocation"),
     axios.get(url + "arena"),
-    axios.get(url + "arena"),
-    axios.get(url + "arena"),
+    axios.get(url + "nexa"),
+    axios.get(url + "commercial"),
   ])
     .then((res) => {
       var locations_h = [];
@@ -31,6 +31,10 @@ export default async function getAllcars(props) {
       });
     })
     .catch(() => props.setState({ error: "Not Fount" }));
+  const path = window.location.pathname.split("/")[3];
+  if (path === "nexa") props.setState({ page: 1 });
+  if (path === "arena") props.setState({ page: 2 });
+  if (path === "commercial") props.setState({ page: 3 });
   props.setState({ loading: false });
   return 0;
 }

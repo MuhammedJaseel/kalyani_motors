@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import getAllcars from "../method/all_car";
 import { ErrorPage, LoadingPage } from "../widget/warning_page";
 import { getCarImage } from "../module/api_init";
-import { makespaceline } from "../module/simple";
+import { getComaPrice, makespaceline } from "../module/simple";
 import { EnquiryPopup } from "../widget/popups";
 import HomeFooter from "../widget/home_footer";
 import { Header } from "../widget/home_top";
@@ -45,7 +45,9 @@ export default class AllCars extends Component {
               {items.map((tab, k) => (
                 <div
                   className="hb_1b2a"
-                  onClick={() => this.setState({ page: k })}
+                  onClick={() => {
+                    this.setState({ page: k });
+                  }}
                 >
                   <div
                     className="hb_1b3"
@@ -64,13 +66,13 @@ export default class AllCars extends Component {
 
             <div className="hb_8a">
               {items[page].bikes.map((item) => (
-                <div
-                  className="hb_8c"
-                  onClick={() =>
-                    (window.location = "/car/" + makespaceline(item.route))
-                  }
-                >
-                  <div className="hb_8d">
+                <div className="hb_8c">
+                  <div
+                    className="hb_8d"
+                    onClick={() =>
+                      (window.location = "/car/" + makespaceline(item.route))
+                    }
+                  >
                     <img
                       className="hb_8e"
                       src={getCarImage(item.images?.[0]?.images)}
@@ -79,9 +81,39 @@ export default class AllCars extends Component {
                   </div>
                   <div className="hb_8f">
                     <div className="hb_8j">{item.name}</div>
-                    <div className="hb_8g">₹ {item.price} Lakh</div>
-                    <div className="hb_8h">Avg Ex-showroom price </div>
-                    <div className="hb_8i">Show price in my city</div>
+                    <div className="hb_8g">
+                      ₹ {getComaPrice(item.price)} Lakh
+                    </div>
+                    <div
+                      className="hb_8h"
+                      onClick={() =>
+                        this.setState({
+                          enquiryPopup: { car: item.name, type: 5 },
+                        })
+                      }
+                    >
+                      Avg Ex-showroom price
+                    </div>
+                    <div
+                      className="hb_8i"
+                      onClick={() =>
+                        this.setState({
+                          enquiryPopup: { car: item.name, type: 0 },
+                        })
+                      }
+                    >
+                      Show On-Road Price
+                    </div>
+                    <div
+                      className="hb_8i"
+                      onClick={() =>
+                        this.setState({
+                          enquiryPopup: { car: item.name, type: 6 },
+                        })
+                      }
+                    >
+                      Show price in my city
+                    </div>
                   </div>
                 </div>
               ))}

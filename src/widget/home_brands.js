@@ -9,11 +9,11 @@ function HomeBrands() {
     {
       bg: "https://marutisuzukiarenaprodcdn.azureedge.net/-/media/images/maruti/marutisuzuki/modules/generic-hero/arena-hero.ashx?rev=f323115f600e4592b68d82648cb4c8da&extension=webp",
       logo: areena_logo,
-      title: "KALYANI AREENA",
+      title: "KALYANI ARENA",
       subtitle: "",
       color: "#3D4693",
       hvcolor: "white",
-      link: "",
+      link: "arena",
       // hvcolor: "rgba(255 , 255, 355, 0.8)",
     },
     {
@@ -23,7 +23,7 @@ function HomeBrands() {
       subtitle: "",
       color: "white",
       hvcolor: "black",
-      link: "",
+      link: "nexa",
       // hvcolor: "rgba(255 , 255, 355, 0.5)",
     },
     {
@@ -33,7 +33,7 @@ function HomeBrands() {
       subtitle: "",
       color: "white",
       hvcolor: "#EE1C25",
-      link: "",
+      link: "commercial",
       // hvcolor: "rgba(100 , 100, 100, 0.8)",
     },
   ];
@@ -47,8 +47,9 @@ function HomeBrands() {
             background: `url(${br.bg}) no-repeat center center`,
           }}
           onClick={() => {
-            if (k === 0) window.location.assign(br.link);
-            else window.open(br.link, "_blank");
+            window.location = "/allcars//" + br.link;
+            // if (k === 0) window.location.assign(br.link);
+            // else window.open(br.link, "_blank");
           }}
         >
           <div className="hm2_c" style={{ background: br.hvcolor }}>

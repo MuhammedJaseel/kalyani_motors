@@ -23,22 +23,22 @@ function HomeFooter({ props }) {
       {
         title: "Areena Cars",
         route: null,
-        fun: () => (window.location = "/allcars/areenacars"),
+        fun: () => (window.location = "/allcars//arena"),
       },
       {
         title: "Nexa Cars",
         route: null,
-        fun: () => (window.location = "/allcars/nexacars"),
+        fun: () => (window.location = "/allcars//nexa"),
       },
       {
         title: "Commericial Cars",
         route: null,
-        fun: () => (window.location = "/allcars/commericialcars"),
+        fun: () => (window.location = "/allcars//commercial"),
       },
       {
         title: "Dream Cars",
         route: null,
-        fun: () => (window.location = "/allcars/dreamcars"),
+        fun: () => (window.location = "/allcars//dreamcars"),
       },
       {
         title: "Used Cars",

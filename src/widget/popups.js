@@ -51,7 +51,7 @@ function EnquiryPopup({ props }) {
                 name: e.target.name.value,
                 phone: e.target.id.value,
                 email: "",
-                location: "",
+                location: enquiryPopup.location ?? "",
                 vehicle: enquiryPopup.car,
                 purpose: types[enquiryPopup.type],
               };

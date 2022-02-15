@@ -46,7 +46,7 @@
   align-items: center;
   padding: 6px 20px;
   background-color: white;
-  box-shadow: rgba(97, 97, 97, 0.623) 0px 3px 10px;
+  box-shadow: rgba(214, 214, 214, 0.623) 0px 3px 6px;
 }
 
 .home_base_logo_area {
@@ -58,7 +58,7 @@
 .home_base_logo {
   -o-object-fit: contain;
   object-fit: contain;
-  width: 130px;
+  width: 120px;
   border-radius: 5px;
 }
 
@@ -81,6 +81,7 @@
   font-weight: 600;
   color: rgba(0, 0, 0, 0.5);
   padding-left: 11px;
+  font-size: small;
 }
 
 .header_text {
