@@ -39,3 +39,7 @@ body::-webkit-scrollbar-corner {
   display: flex;
 }
 
+.center{
+  display: flex;
+  justify-content: center;
+}

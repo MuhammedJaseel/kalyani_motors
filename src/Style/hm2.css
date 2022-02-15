@@ -1,0 +1,68 @@
+.hm2_a {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.hm2_b {
+  width: calc(100% / 3);
+  max-height: 500px;
+  min-height: 500px;
+  overflow: hidden;
+  margin: 1.5px;
+  cursor: pointer;
+  position: relative;
+  background-size: cover;
+}
+
+.hm2_c {
+  position: relative;
+  top: 500px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hm2_b:hover .hm2_c {
+  transition: 0.9s ease-in-out;
+  top: 0px;
+}
+
+.hm2_b:hover {
+  background-size: cover;
+  transition: 0.5s ease-in-out;
+  width: 50%;
+}
+
+.hm2_b:not(:hover) .hm2_c {
+  transition: 0.3s ease-in-out;
+  top: 500px;
+}
+
+.hm2_b:not(:hover) {
+  background-size: cover;
+  transition: 0.4s ease-in-out;
+  width: calc(100% / 3);
+}
+
+.hm2_f {
+  color: aliceblue;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hm2_d {
+  display: flex;
+  height: 120px;
+  align-items: center;
+}
+
+.hm2_e {
+  max-width: 200px;
+  max-height: 100px;
+}

@@ -1,42 +1,82 @@
-import React, { useEffect, useState } from "react";
-import HomeAppsAds from "../Compnent/home_apps_ads";
-import HomeBodyHeader from "../Compnent/home_body_header";
-import HomeBrands from "../Compnent/home_brands";
-import HomeCars from "../Compnent/home_cars";
-import HomeFindCar from "../Compnent/home_findcar";
-import HomeFooter from "../Compnent/home_footer";
-import HomeMunsoon from "../Compnent/home_monsoon";
-import HomeQuestions from "../Compnent/home_questions";
-import HomeSecurity from "../Compnent/home_security";
-import HomeService from "../Compnent/home_service";
-import { HomeTop } from "../Compnent/home_top";
-import LoadingPage from "../Compnent/loading_page";
-import { getData } from "../methord/home";
+import React, { Component } from "react";
+import HomeAppsAds from "../widget/home_apps_ads";
+import HomeBodyHeader from "../widget/home_body_header";
+import HomeBrands from "../widget/home_brands";
+import HomeCars from "../widget/home_cars";
+import HomeFindCar from "../widget/home_findcar";
+import HomeFooter from "../widget/home_footer";
+import HomeMunsoon from "../widget/home_monsoon";
+import HomeQuestions from "../widget/home_questions";
+import HomeSecurity from "../widget/home_security";
+import HomeService from "../widget/home_service";
+import { HomeTop, HomeLocationPopup, Header } from "../widget/home_top";
+import HomeOnroudPrice from "../widget/home_onroadprice";
+import { getAllData, homeCarAndServiceSearch } from "../method/home";
+import { ErrorPage, LoadingPage } from "../widget/warning_page";
+import { EnquiryPopup } from "../widget/popups";
 
-function Home() {
-  const [loading, setloading] = useState(true);
-  const [label, setlabel] = useState(null);
-  const [items, setitems] = useState(null);
+export default class HomePage extends Component {
+  constructor() {
+    super();
+    this.state = {
+      locationPopup: false,
+      loading: true,
+      error: null,
+      allCars: [],
+      seasonCars: [],
+      findCars: [],
+      services: [],
+      banners: [],
+      homeSearchs: [],
+      locations_h: [],
+      locations_b: [],
+      location: {},
+      faq: [],
+      enquiryPopup: null,
+      bannar_p: null,
+      bannar_e: null,
+      sesonService: { services: [] },
+    };
+  }
 
-  useEffect(() => getData(setlabel, setloading, setitems));
+  componentDidMount() {
+    getAllData(this);
+  }
 
-  return loading ? (
-    <LoadingPage />
-  ) : (
-    <React.StrictMode>
-      <HomeTop />
-      <HomeBrands />
-      <HomeBodyHeader />
-      <HomeCars />
-      <HomeFindCar />
-      <HomeService />
-      <HomeSecurity />
-      <HomeMunsoon />
-      <HomeAppsAds />
-      <HomeQuestions />
-      <HomeFooter />
-    </React.StrictMode>
-  );
+  executeScroll = (id) => {
+    var element = document.getElementById(id);
+    if (element === null) return;
+    var elementPosition = element.getBoundingClientRect().top;
+    window.scrollTo({
+      top: window.scrollY + elementPosition - 70,
+      behavior: "smooth",
+    });
+  };
+
+  carAndServiceSearch = (e) => homeCarAndServiceSearch(e, this);
+
+  render() {
+    const { loading, error } = this.state;
+    if (loading) return <LoadingPage />;
+    if (error != null) return <ErrorPage />;
+    return (
+      <React.StrictMode>
+        <Header props={this} />
+        <HomeTop props={this} />
+        <HomeBrands />
+        <HomeBodyHeader props={this} />
+        <HomeLocationPopup props={this} />
+        <HomeCars props={this} />
+        <HomeOnroudPrice props={this} />
+        <HomeFindCar props={this} />
+        <HomeService props={this} />
+        <HomeSecurity props={this} />
+        <HomeMunsoon props={this} />
+        {/* <HomeAppsAds /> */}
+        <HomeQuestions props={this} />
+        <HomeFooter props={this} />
+        <EnquiryPopup props={this} />
+      </React.StrictMode>
+    );
+  }
 }
-
-export default Home;

@@ -43,25 +43,18 @@
 }
 
 .home_services_each {
-  /* min-width: 230px; */
   width: 230px;
   height: 180px;
   margin: 15px;
   background-color: white;
   border: 1px solid #d8d8d8;
   border-radius: 7px;
-  /* background: #f3f3f3; */
-  /* padding-top: 20px; */
   box-shadow: 0 0.25rem 0.3125rem -0.15rem rgb(0 0 0 / 12%);
 }
 
 .home_services_each:hover {
   transition: 0.5s ease-in-out;
-  /* -moz-transition: width 1s ease-in-out; */
-  /* -o-transition: width 1s ease-in-out; */
-  /* transition: width 1s ease-in-out; */
   margin: 5px;
-  /* padding-top: 25px; */
   width: 250px;
   height: 200px;
 }
@@ -139,13 +132,13 @@
 
 .home_body_header_container {
   display: flex;
+  justify-content: space-between;
   position: relative;
   height: 65px;
   background-color: #f6f6f6;
   align-items: center;
   box-shadow: 0 0.25rem 0.3125rem 0 rgb(0 0 0 / 12%);
   width: 100%;
-  /* flex-wrap: wrap; */
 }
 
 @media only screen and (max-width: 576px) {
@@ -155,14 +148,12 @@
 }
 
 .home_body_header_logo_area {
-  /* width: 170px; */
   min-width: 170px;
   padding: 0px 1%;
 }
 
 .home_body_header_navigator {
   display: flex;
-  width: calc(60% - 170px);
   min-width: 300px;
   align-items: center;
 }
@@ -174,21 +165,6 @@
   padding: 0% 2%;
 }
 
-.home_body_header_leftarrow {
-  width: 10px;
-  height: 17px;
-  object-fit: contain;
-  transform: rotate(180deg);
-  margin-right: 5px;
-  padding: 0px 10px;
-}
-.home_body_header_rightarrow {
-  width: 10px;
-  height: 17px;
-  object-fit: contain;
-  margin-right: 5px;
-  padding: 0px 10px;
-}
 .home_body_header_maincontent {
   display: flex;
   overflow: auto;
@@ -221,20 +197,16 @@ SOURAV
 * {
   font-family: sans-serif;
 }
+
 .header {
   font-weight: 700;
   color: #282828;
   font-size: 32px;
   font-family: sans-serif;
 }
-/* .glide_review {
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-} */
+
 .card {
   background-color: #f6f6f6;
-
   width: 433px;
   height: 462px;
   padding-left: 16px;
@@ -242,11 +214,13 @@ SOURAV
   margin-left: 5px;
   margin-right: 5px;
 }
+
 .quats_img {
   height: 50px;
   width: 50px;
   margin-top: -30px;
 }
+
 .card_header {
   font-size: 21;
   font-weight: 700;
@@ -259,6 +233,7 @@ SOURAV
   font-family: sans-serif;
   margin: "7px 0px 0px";
 }
+
 .card_text {
   display: flex;
   justify-content: center;
@@ -272,37 +247,7 @@ SOURAV
   letter-spacing: 0.0088rem;
   min-height: 12.5rem;
 }
-/* .social_icon {
-  flex-direction: row;
-  display: flex;
-} */
-/* .social_data {
-  color: #000;
-  margin-left: 1.5rem;
-  padding: 10px;
-  flex-direction: row;
-} */
-/* .social_data_name {
-  margin: -3px;
-  font-size: 0.9375rem;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.6;
-  letter-spacing: 0.0088rem;
-  text-align: left;
-  color: #000;
-} */
-/* .social_data_media {
-  margin: -3px;
-  font-weight: 400;
-  color: #4a4a4a;
-  font-size: 0.9375rem;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.6;
-  letter-spacing: 0.0088rem;
-  text-align: left;
-} */
+
 .horizonalbar {
   border: 0.125rem solid #f1f1f1;
 }
@@ -317,6 +262,7 @@ SOURAV
   width: 94%;
   margin-top: 2px;
 }
+
 .dropdown_text {
   font-size: 17px;
   font-weight: 600;
@@ -327,6 +273,7 @@ SOURAV
   text-align: left;
   color: #282828;
 }
+
 .dropdown_data {
   background-color: #f6f6f6;
   font-size: 15px;
@@ -350,12 +297,14 @@ SOURAV
   padding-right: 0.625rem;
   border-right: 0.0625rem solid #e3ecf8;
 }
+
 .mobile_no_input {
   outline: none;
   border: none;
   max-width: 7.5rem;
   margin-left: 0.625rem;
 }
+
 .get_app_link {
   font-size: 0.875rem;
   font-weight: 600;
@@ -369,6 +318,7 @@ SOURAV
   padding: 0.625rem;
   cursor: pointer;
 }
+
 .feature_service_header_div {
   display: flex;
   font-weight: 700;
@@ -382,6 +332,7 @@ SOURAV
   align-items: center;
   font-size: 32px;
 }
+
 .service_buddies {
   padding: 16px;
   display: flex;
@@ -391,6 +342,7 @@ SOURAV
   border: 0.0625rem solid hsla(0, 0%, 60.8%, 0.15);
   margin-top: 30px;
 }
+
 .service_buddie_name {
   font-stretch: normal;
   font-size: 21px;
@@ -400,10 +352,12 @@ SOURAV
   text-align: left;
   color: #282828;
 }
+
 .rating_star {
   width: 25px;
   height: 25px;
 }
+
 .buddies_rating_detail {
   font-size: 14px;
   font-weight: 400;
@@ -413,6 +367,7 @@ SOURAV
   letter-spacing: 0.0129rem;
   text-align: left;
 }
+
 ul li::marker {
   unicode-bidi: isolate;
   font-variant-numeric: tabular-nums;
@@ -421,6 +376,7 @@ ul li::marker {
   text-align: start !important;
   text-align-last: start !important;
 }
+
 .buddies_service_details {
   min-height: 4rem;
   display: flex;
@@ -436,6 +392,7 @@ ul li::marker {
   margin-top: 12.6px;
   font-stretch: normal;
 }
+
 .whyin_bangalore {
   display: flex;
   font-size: 1.125rem;
@@ -449,6 +406,7 @@ ul li::marker {
   justify-content: space-between;
   align-items: center;
 }
+
 .reason_to_choose {
   display: "flex";
   flex-direction: column;
@@ -457,17 +415,20 @@ ul li::marker {
   height: fit-content;
   padding-bottom: 1.85rem;
 }
+
 .service_price_header {
   display: flex;
   text-align: left;
   color: #282828;
   align-items: center;
 }
+
 .pricelist_table {
   width: 100%;
   border-collapse: collapse;
   border: 0.0625rem solid hsla(0, 0%, 60.8%, 0.5);
 }
+
 .price_table_head {
   font-size: 0.9375rem;
   font-weight: 500;
@@ -477,13 +438,10 @@ ul li::marker {
   padding: 1.125rem 1.0625rem;
   border: 0.0625rem solid hsla(0, 0%, 60.8%, 0.5);
 }
+
 @media (max-width: 30px) {
   .carousil {
     width: 30px;
     height: 30px;
   }
 }
-
-/**********************************************************************************************************/
-
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////// */

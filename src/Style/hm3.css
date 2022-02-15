@@ -1,0 +1,66 @@
+.hm3_Container {
+  background-color: #cbcbcb;
+  background-size: cover;
+  height: 420px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px 1%;
+  background-image: url(https://bajajapi.escvpn.com/upload/banner/form1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.hm3_Container2 {
+  background-color: #cbcbcb;
+  background-size: cover;
+  height: 420px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px 1%;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hm3_left-div {
+  max-width: 300px;
+  margin: 5%;
+  background-color: white;
+  padding: 15px;
+  box-shadow: 0 2px 3px #aaa;
+  border-radius: 2px;
+}
+
+.hm3_input_tab {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 2px;
+  font-family: sans-serif;
+  outline: none;
+}
+
+.hm3_input_tab :focus {
+  background-color: aqua;
+}
+
+.hm3_btn {
+  padding: 8px;
+  text-align: center;
+  color: white;
+  border-width: 0px;
+  margin: 10px;
+  border-radius: 2px;
+  background-color: #1B65B1;
+  cursor: pointer;
+  width: calc(100% - 20px);
+}
+
+

@@ -1,7 +1,7 @@
-.service_header {
+/* .service_header {
   height: 79px;
   background: #1d1d1b;
-}
+} */
 
 .service_title {
   font-weight: bold;
@@ -84,6 +84,8 @@
   border-radius: 3px;
   font-size: 14px;
   font-weight: 600;
+  background-color: white;
+  cursor: pointer;
 }
 
 .service_body_header_container {

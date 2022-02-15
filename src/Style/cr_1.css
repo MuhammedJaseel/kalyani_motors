@@ -18,13 +18,20 @@
 
 .cr_1g {
   font-size: 13px;
-  color: #aaaaaa;
+  color: #474747;
   display: flex;
-  /* font-weight: 500; */
+  position: sticky;
+  top: 68px;
+  background-color: white;
+  box-shadow: 2px 8px 6px rgba(0, 0, 0, 0.103) ;
+  padding: 0px 2%;
+  margin: 5px 0px;
+  font-weight: 500;
 }
 
 .cr_1g_a {
   padding: 10px 25px 10px 0px;
+  cursor: pointer;
 }
 
 .cr_1h {
@@ -40,16 +47,16 @@
 }
 
 .cr_1j {
-  height: 260px;
+  height: 303px;
   border-top-left-radius: 6px;
   background-color: wheat;
 }
 
 .cr_1k {
-  color: #6f6f6f;
-  font-size: 13px;
-  padding: 30px;
-  display: flex;
+  padding: 0px;
+  margin: 7px;
+  object-fit: cover;
+  height: 35px;
 }
 
 .cr_1m {
@@ -117,6 +124,7 @@
   font-weight: 600;
   color: #0288d1;
   padding-top: 4px;
+  cursor: pointer;
 }
 
 .cr_1ac {
@@ -127,12 +135,14 @@
   font-size: 12px;
   font-weight: 600;
   height: 14px;
+  cursor: pointer;
 }
 
 .cr_1ad {
   font-size: 15px;
   color: #0288d1;
   padding: 18px 0px;
+  cursor: pointer;
 }
 
 .cr_1f {
@@ -146,18 +156,19 @@
   margin-right: 10px;
 }
 
-.cr_1b {
+/* .cr_1b {
   padding: 6px 20px;
   background-color: white;
   box-shadow: 0px 2px 5px rgb(235, 235, 235);
   position: sticky;
+  top: 0px;
   align-items: center;
   display: flex;
 }
 
 .cr_1b1 {
   height: 38px;
-}
+} */
 
 .cr_1ae {
   background-color: #e53012;
@@ -169,6 +180,24 @@
   width: 280px;
   display: flex;
   justify-content: center;
+  cursor: pointer;
+}
+
+.cr_1af {
+  border: 1.5px solid #e1e1e1;
+  border-radius: 3px;
+  margin: 10px 0px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.cr_1ag {
+  width: 25px;
+  height: 25px;
+  margin: 0px 10px;
+  margin-left: 30px;
+  background-color: #00afa0;
 }
 
 .cr_sp_b {
